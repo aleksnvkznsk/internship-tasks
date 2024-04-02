@@ -32,6 +32,9 @@ class Form extends Component {
         console.log(e.target);
         console.log(data);
 
+        document.querySelector(".form__content__container__message").textContent = "";
+        document.querySelector(".form__content__container__message").classList.remove("green", "red");
+
       if (response.ok) {
         document.querySelector(".form__content__container__message").textContent = "Отправлено";
         document.querySelector(".form__content__container__message").classList.add( "green" );
