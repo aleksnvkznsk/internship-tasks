@@ -39,8 +39,10 @@ class Form extends Component {
         document.querySelector(".form__content__container__message").textContent = "Отправлено";
         document.querySelector(".form__content__container__message").classList.add( "green" );
       } else {
-        document.querySelector(".form__content__container__message").textContent = "Ошибка";
-        document.querySelector(".form__content__container__message").classList.add( "red" );
+        const errorData = await response.json();
+          const errorMessage = errorData.message;
+          document.querySelector(".form__content__container__message").textContent = errorMessage;
+          document.querySelector(".form__content__container__message").classList.add("red");
       }
     } catch (error) {
       console.error("Ошибка получения данных(form)", error);
