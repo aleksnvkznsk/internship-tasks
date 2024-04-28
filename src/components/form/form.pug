@@ -1,0 +1,38 @@
+mixin form(props)
+	.form&attributes(attributes)(data-component='form')
+		//Your code here
+		form.form(action="")
+
+			input.form__input__email(type="email" name='email' placeholder='E-mail')
+			span.form__input__email__error
+
+			input.form__input__text(type="text" name='text' placeholder='Ваше сообщение')
+			span.form__input__text__error
+
+
+
+
+			label.form__input__file(htmlFor="MyId")
+				span.form__input__file__text Прикрепить файл
+				+svg('Vector2').form__input__file__icon
+				input(type="file" name='file' style="display: none" accept=".pdf,.doc,.docx" placeholder="Прикрепите файл"  multiple)
+				
+
+
+
+
+
+
+
+
+			div.form__container
+				input.form__container__input(type="checkbox" name='confirm')
+				p.form__container__text Вы подтверждаете, что ознакомились
+				a.form__container__href с политикой обработки персональных данных
+
+			button.form__button__send
+				span.form__button__send__text Отправить
+				+svg('Vector').form__button__send__icon
+
+
+

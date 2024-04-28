@@ -1,0 +1,230 @@
+.form {
+  $root: &;
+
+  //Your code here
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__input {
+    &__email {
+      border-bottom: solid 1px #dedede;
+      width: 556px;
+      height: 48px;
+      padding: 10px;
+      margin: 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      transition: 1s;
+
+      &:hover {
+        background-color: #f4f4f4;
+        border-radius: 24px;
+        border-bottom: none;
+        transition: 1s;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      &:focus {
+        border: solid 1px #0041a0;
+        border-radius: 24px;
+      }
+
+      &:invalid {
+        border: solid 1px #ff0000;
+        border-radius: 24px;
+        width: 556px;
+        height: 48px;
+        padding: 10px;
+        margin: 10px;
+      }
+    }
+    &__text {
+      border-bottom: solid 1px #dedede;
+      width: 556px;
+      height: 48px;
+      padding: 10px;
+      margin: 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      transition: 1s;
+
+      &:hover {
+        transition: 1s;
+        background-color: #f4f4f4;
+        border-radius: 24px;
+        border-bottom: none;
+        height: 193px;
+        padding: 16px;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      &:focus {
+        border: solid 1px #0041a0;
+        border-radius: 24px;
+        width: 556px;
+        height: 48px;
+        padding: 10px;
+        margin: 10px;
+        height: 193px;
+        padding: 16px;
+      }
+
+      &:invalid {
+        border: solid 1px #ff0000;
+        border-radius: 24px;
+        width: 556px;
+        padding: 10px;
+        margin: 10px;
+        height: 193px;
+      }
+    }
+
+    &__file {
+      height: 46px;
+      width: 207px;
+      border-radius: 25px;
+      border: solid 1px #bcbcbc;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 12px;
+      transition: 1s;
+
+      &__text {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+      }
+      &__icon {
+        width: 14px;
+        height: 14px;
+        margin-left: 16px;
+      }
+      &:hover {
+        transition: 1s;
+        background-color: #0041a0;
+        color: white;
+        .form__button__add__icon {
+          color: white;
+        }
+      }
+      &:active {
+        background-color: #002f6c;
+        color: white;
+        .form__button__add__icon {
+          color: white;
+        }
+      }
+      &:focus {
+        border: solid 3px #99b3d8;
+      }
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__button {
+    &__send {
+      transition: 1s;
+      height: 48px;
+      width: 138px;
+      border-radius: 25px;
+      border: solid 1px #bcbcbc;
+      padding: 14px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__text {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+      }
+      &__icon {
+        width: 32px;
+        height: 22px;
+        margin-left: 5px;
+      }
+      &:hover {
+        transition: 1s;
+        background-color: #0041a0;
+        color: white;
+        .form__button__send__icon {
+          color: white;
+        }
+      }
+      &:active {
+        background-color: #002f6c;
+        color: white;
+        .form__button__send__icon {
+          color: white;
+        }
+      }
+      &:focus {
+        border: solid 3px #99b3d8;
+      }
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+
+    &__input {
+      border: solid rgb(149, 149, 149);
+      width: 16px;
+      height: 16px;
+      display: block;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:focus {
+        border: solid 3px #99b3d8;
+      }
+
+      &:hover {
+        border: solid #002f6c;
+      }
+
+      &:checked {
+        background-color: #002f6c;
+      }
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+    &__text {
+      color: #696969;
+    }
+    &__href {
+      color: #0041a0;
+      margin-left: 5px;
+    }
+  }
+}
+.red {
+  color: #ff0000;
+  transition: 1s;
+}

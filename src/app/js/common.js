@@ -1,4 +1,6 @@
+import { fromJSON } from "postcss";
 import ExampleButton from "../../components/example-button/example-button";
+import Form from "../../components/form/form";
 
 /**
  * Объект со всеми компонентами, для которых будет применяться автоматическая инициализация
@@ -7,6 +9,7 @@ import ExampleButton from "../../components/example-button/example-button";
  */
 const allComponents = {
     'example-button': ExampleButton,
+    'form': Form,
 }
 
 /**
