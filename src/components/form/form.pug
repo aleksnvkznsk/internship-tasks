@@ -29,10 +29,12 @@ mixin form(props)
 				input.form__container__input(type="checkbox" name='confirm')
 				p.form__container__text Вы подтверждаете, что ознакомились
 				a.form__container__href с политикой обработки персональных данных
+			span.form__checkbox__error
 
 			button.form__button__send
 				span.form__button__send__text Отправить
 				+svg('Vector').form__button__send__icon
+			span.form__button__message
 
 
 
